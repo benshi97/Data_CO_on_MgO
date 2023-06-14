@@ -1,0 +1,106 @@
+
+                __ __      
+     __________/ // / _____
+    / ___/ ___/ // /_/ ___/
+   / /__/ /__/__  __(__  ) 
+   \___/\___/  /_/ /____/  
+  Coupled Cluster for Solids
+
+version: heads/develop-0-g0056198, date: Thu May 19 22:36:50 2022 +0200
+build date: Jun 14 2022 15:46:06
+compiler: icc (ICC) 19.1.2.254 20200623
+mpi: Intel(R) MPI Library for Linux* OS, Version 2019 Update 8 Build 20200624 (id: 4f16ad915)
+total processes: 384
+calculation started on: Thu Feb 23 22:34:35 2023
+
+DRY RUN ONLY - nothing will be calculated
+Dry run finished. Estimates provided for 384 ranks.
+Memory estimate (per Rank/Total): 7.46673 / 2867.22 GB
+Operations estimate (per Rank/Total): 2.38648e+07 / 9.16408e+09 GFLOPS
+Time estimate with assumed performance of 10 GFLOPS/core/s: 2.38648e+06 s (662.911 h)
+--
+step: 1, Read
+Reading from binary file CoulombVertex.elements
+realtime 16.618837977 s
+--
+step: 2, Read
+Reading from text file EigenEnergies.elements
+realtime 0.067611911 s
+--
+step: 3, DefineHolesAndParticles
+number of holes     No: 117
+number of particles Nv: 1170
+number of states    Np: 1287
+realtime 0.000545706 s
+--
+step: 4, SliceOperator
+Slicing CoulombVertex.elements into holes and particles.
+realtime 2.126693278 s
+--
+step: 5, VertexCoulombIntegrals
+Using real Coulomb integrals
+number of field variables NF: 3780
+realtime 3.863640788 s
+--
+step: 6, CoupledCluster
+Using method Ccsd. integralsSliceSize: 100
+Using mixer DiisMixer. maxResidua: 4
+Maximum number of iterations: 30
+Unless reaching energy convergence dE: 0.0001
+and amplitudes convergence dR: 0.0001
+Iter         Energy         dE           dR         time   GF/s/core
+   1  -1.81862202e+02  -1.8186e+02   1.0477e+00    107.5   34.4
+   2  -1.76063369e+02   5.7988e+00   2.2030e-01   4726.4   48.4
+   3  -1.79707551e+02  -3.6442e+00   5.2976e-02   4744.6   48.2
+   4  -1.80518567e+02  -8.1102e-01   2.2544e-02   4767.1   48.0
+   5  -1.80474786e+02   4.3781e-02   6.9936e-03   4746.5   48.2
+   6  -1.80463035e+02   1.1751e-02   2.9463e-03   4760.4   48.0
+   7  -1.80462213e+02   8.2151e-04   1.2651e-03   4747.4   48.2
+   8  -1.80455837e+02   6.3763e-03   5.1941e-04   4765.1   48.0
+   9  -1.80454832e+02   1.0052e-03   2.8538e-04   4765.6   48.0
+  10  -1.80453876e+02   9.5547e-04   1.1120e-04   4762.0   48.0
+  11  -1.80453722e+02   1.5416e-04   6.3908e-05   4746.9   48.2
+  12  -1.80453534e+02   1.8856e-04   2.9577e-05   4728.8   48.4
+  13  -1.80453509e+02   2.4838e-05   1.6623e-05   4732.4   48.3
+
+Ccsd correlation energy:          -180.4535086966
+2nd-order correlation energy:     -181.8622016701
+realtime 57128.326398247 s
+--
+step: 7, Read
+Reading from binary file CoulombVertexSingularVectors.elements
+realtime 0.264163627 s
+--
+step: 8, Read
+Reading from text file GridVectors.elements
+realtime 0.026204588 s
+--
+step: 9, Read
+Reading from text file CoulombPotential.elements
+realtime 0.007959508 s
+--
+step: 10, FiniteSizeCorrection
+Finite-size energy correction:    -0.4348376358
+realtime 252.228042269 s
+--
+step: 11, Write
+Writing to text file StructureFactor.elements
+realtime 2.462995075 s
+--
+step: 12, Read
+Reading from binary file DeltaIntegralsHH.elements
+realtime 0.086867558 s
+--
+step: 13, Read
+Reading from binary file DeltaIntegralsPPHH.elements
+realtime 47.870061947 s
+--
+step: 14, Read
+Reading from text file Mp2PairEnergies.elements
+realtime 0.010679532 s
+--
+step: 15, BasisSetCorrection
+Ccsd-Bsie energy correction:      -14.1244351317
+realtime 108.350784411 s
+--
+step: 16, PerturbativeTriples
