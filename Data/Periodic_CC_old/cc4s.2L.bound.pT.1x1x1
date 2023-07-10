@@ -1,0 +1,81 @@
+
+                __ __      
+     __________/ // / _____
+    / ___/ ___/ // /_/ ___/
+   / /__/ /__/__  __(__  ) 
+   \___/\___/  /_/ /____/  
+  Coupled Cluster for Solids
+
+version: heads/develop-0-g0056198f, date: Thu May 19 22:36:50 2022 +0200
+build date: Mar  8 2023 09:56:51
+compiler: icc (ICC) 19.1.0.166 20191121
+mpi: Intel(R) MPI Library for Linux* OS, Version 2019 Update 6 Build 20191024 (id: 082ae5608)
+total processes: 768
+calculation started on: Mon Mar 27 08:34:26 2023
+
+DRY RUN ONLY - nothing will be calculated
+Dry run finished. Estimates provided for 768 ranks.
+Memory estimate (per Rank/Total): 4.00999 / 3079.67 GB
+Operations estimate (per Rank/Total): 1.19324e+07 / 9.16408e+09 GFLOPS
+Time estimate with assumed performance of 10 GFLOPS/core/s: 1.19324e+06 s (331.455 h)
+--
+step: 1, Read
+Reading from binary file CoulombVertex.elements
+realtime 14.128502354 s
+--
+step: 2, Read
+Reading from text file EigenEnergies.elements
+realtime 0.016194369 s
+--
+step: 3, DefineHolesAndParticles
+number of holes     No: 117
+number of particles Nv: 1170
+number of states    Np: 1287
+realtime 0.000951854 s
+--
+step: 4, SliceOperator
+Slicing CoulombVertex.elements into holes and particles.
+realtime 1.847267050 s
+--
+step: 5, VertexCoulombIntegrals
+Using real Coulomb integrals
+number of field variables NF: 3780
+realtime 2.103023974 s
+--
+step: 6, CoupledCluster
+Using method Ccsd. integralsSliceSize: 100
+Using mixer DiisMixer. maxResidua: 4
+Maximum number of iterations: 30
+Unless reaching energy convergence dE: 0.0001
+and amplitudes convergence dR: 0.0001
+Iter         Energy         dE           dR         time   GF/s/core
+   1  -1.81862202e+02  -1.8186e+02   1.0477e+00     69.1   26.7
+   2  -1.76063369e+02   5.7988e+00   2.2030e-01   3322.7   34.4
+   3  -1.79707551e+02  -3.6442e+00   5.2976e-02   3332.5   34.3
+   4  -1.80518567e+02  -8.1102e-01   2.2544e-02   3330.3   34.3
+   5  -1.80474786e+02   4.3781e-02   6.9936e-03   3333.6   34.3
+   6  -1.80463035e+02   1.1751e-02   2.9463e-03   3330.5   34.3
+   7  -1.80462213e+02   8.2151e-04   1.2651e-03   3342.7   34.2
+   8  -1.80455837e+02   6.3763e-03   5.1941e-04   3342.4   34.2
+   9  -1.80454832e+02   1.0052e-03   2.8538e-04   3335.2   34.3
+  10  -1.80453876e+02   9.5547e-04   1.1120e-04   3351.4   34.1
+  11  -1.80453722e+02   1.5416e-04   6.3908e-05   3327.6   34.4
+  12  -1.80453533e+02   1.8856e-04   2.9577e-05   3329.8   34.3
+  13  -1.80453509e+02   2.4838e-05   1.6623e-05   3332.5   34.3
+
+Ccsd correlation energy:          -180.4535086447
+2nd-order correlation energy:     -181.8622016244
+realtime 40097.969735298 s
+--
+Please note that the PerturbativeTriples calculation had to be restarted due to wall time limit.
+--
+step: 16, PerturbativeTriples
+Progress(%)  time(s)   GFLOP/s      
+60           14323     365.257      
+70           35801     121.768      
+80           35907     81.080       
+90           35706     64.461       
+100          35825     55.338       
+(T) correlation energy:      -7.462532994908535
+realtime 163420.697030338 s
+--

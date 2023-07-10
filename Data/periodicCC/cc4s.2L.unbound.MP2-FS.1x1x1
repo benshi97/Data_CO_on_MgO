@@ -1,0 +1,77 @@
+
+                __ __      
+     __________/ // / _____
+    / ___/ ___/ // /_/ ___/
+   / /__/ /__/__  __(__  ) 
+   \___/\___/  /_/ /____/  
+  Coupled Cluster for Solids
+
+version: heads/develop-0-g0056198f, date: Thu May 19 22:36:50 2022 +0200
+build date: Mar  8 2023 09:56:51
+compiler: icc (ICC) 19.1.0.166 20191121
+mpi: Intel(R) MPI Library for Linux* OS, Version 2019 Update 6 Build 20191024 (id: 082ae5608)
+total processes: 384
+calculation started on: Sat Apr  1 09:54:56 2023
+
+DRY RUN ONLY - nothing will be calculated
+Dry run finished. Estimates provided for 384 ranks.
+Memory estimate (per Rank/Total): 3.45428 / 1326.44 GB
+Operations estimate (per Rank/Total): 35078 / 1.347e+07 GFLOPS
+Time estimate with assumed performance of 10 GFLOPS/core/s: 3507.8 s (0.974389 h)
+--
+step: 1, Read
+Reading from binary file CoulombVertex.elements
+realtime 25.445124161 s
+--
+step: 2, Read
+Reading from text file EigenEnergies.elements
+realtime 0.021665914 s
+--
+step: 3, DefineHolesAndParticles
+number of holes     No: 117
+number of particles Nv: 1170
+number of states    Np: 1287
+realtime 0.001314138 s
+--
+step: 4, SliceOperator
+Slicing CoulombVertex.elements into holes and particles.
+realtime 6.507994968 s
+--
+step: 5, VertexCoulombIntegrals
+Using real Coulomb integrals
+number of field variables NF: 4531
+realtime 4.996856267 s
+--
+step: 6, CoupledCluster
+Using method Ccsd. integralsSliceSize: 100
+Using mixer DiisMixer. maxResidua: 4
+Maximum number of iterations: 1
+Unless reaching energy convergence dE: 0.0001
+and amplitudes convergence dR: 0.0001
+Iter         Energy         dE           dR         time   GF/s/core
+   1  -1.81599846e+02  -1.8160e+02   1.0473e+00    137.9   32.1
+
+Ccsd correlation energy:          -181.5998460287
+2nd-order correlation energy:     -181.5998460287
+realtime 173.843195433 s
+--
+step: 7, Read
+Reading from binary file CoulombVertexSingularVectors.elements
+realtime 0.295743573 s
+--
+step: 8, Read
+Reading from text file GridVectors.elements
+realtime 0.038812425 s
+--
+step: 9, Read
+Reading from text file CoulombPotential.elements
+realtime 0.013260469 s
+--
+step: 10, FiniteSizeCorrection
+Finite-size energy correction:    -0.4379209184
+realtime 299.684535616 s
+--
+step: 11, Write
+Writing to text file StructureFactor.elements
+realtime 1.632227655 s
+--
