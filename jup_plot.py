@@ -16,19 +16,20 @@ import matplotlib.mlab as mlab
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 from matplotlib.ticker import AutoMinorLocator
 import matplotlib as mpl
-mpl.use("pgf")
+# mpl.use("pgf")
 import matplotlib.pyplot as plt
 plt.rcParams.update({
     "font.family": "serif",  # use serif/main font for text elements
     "font.size": 9,
-    "text.usetex": True,     # use inline math for ticks
-    "pgf.rcfonts": False,    # don't setup fonts from rc parameters
-    "pgf.preamble":"\n".join([
-         r"\usepackage{amsmath}",            # load additional packages
-         r"\usepackage{amssymb}",   # unicode math setup
-         r"\usepackage[mathrm=sym]{unicode-math}"  # serif font via preamble
-    ])
+    "text.usetex": False     # use inline math for ticks
 })
+#     "pgf.rcfonts": False,    # don't setup fonts from rc parameters
+#     "pgf.preamble":"\n".join([
+#          r"\usepackage{amsmath}",            # load additional packages
+#          r"\usepackage{amssymb}",   # unicode math setup
+#          r"\usepackage[mathrm=sym]{unicode-math}"  # serif font via preamble
+#     ])
+# })
 
 color_dict = {'red':'#e6194b',
 'green': '#3cb44b',
