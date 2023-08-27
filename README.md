@@ -1,4 +1,6 @@
 <a target="_blank" href="https://colab.research.google.com/github/benshi97/Data_CO_on_MgO/blob/main/analyse.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 
 This repository accompanies the paper **A coming of age for many-body methods: Achieving consensus with experiments for CO on MgO** by Benjamin X. Shi, Andrea Zen, Venkat Kapil,  Péter R. Nagy, Andreas Gr&uuml;neis and Angelos
 Michaelides.
